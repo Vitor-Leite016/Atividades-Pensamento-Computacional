@@ -1,0 +1,9 @@
+encrypted = []
+    for ch in s:
+        if ch.isalpha():
+            base = ord('a') if ch.islower() else ord('A')
+            encrypted_ch = chr((ord(ch) - base + k) % 26 + base)
+            encrypted.append(encrypted_ch)
+        else:
+            encrypted.append(ch)
+    return ''.join(encrypted)
